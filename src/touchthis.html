@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style2.css">
+    <title>Dành tặng người đặc bịt</title>
+</head>
+<body>
+    <h1 align="center">Bấm vân tay đê !!!</h1>
+    <br><br><br>
+    <div class="vantay" align="center">
+        <img class="anthanchithuat" width="450px" src="./khung.webp" alt="" id="anthanchithuat">
+        <img width="60px" class="icon-len" src="./fingerprint.png" alt="none" id="click">
+    </div>
+</body>
+<script>
+    const buttonclick = document.getElementById('click');
+    buttonclick.addEventListener('click',function(){
+        const hienlen = document.getElementById('anthanchithuat');
+        hienlen.style.opacity = 1;
+        hienlen.style.transition = "opacity 0.5s ease-in-out"
+    })
+</script>
+</html>

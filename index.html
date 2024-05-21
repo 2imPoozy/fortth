@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dành tặng người đặc bịt</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="ditroi">Chọn 1 trong 2 nút !!!</h1>
+    <div class="container">
+        <img class="img" src="./src/catplease.gif" alt="">
+    </div>
+    <br>
+    <div align="center">
+        <button class="button-p" role="button" onclick="" id="buttonclick">
+            <span class="button-s"></span>
+            <span class="button-e"></span>
+            <span  class="button-f" id="dongy">
+            Đồng ý
+            </span>
+        </button>
+        <button class="button-p" style="margin-left: 50px;" role="button" onclick="tanglen()">
+            <span class="button-s"></span>
+            <span class="button-e"></span>
+            <span class="button-f">
+            Từ trối >:(
+            </span>
+        </button>
+    </div>
+    <script>
+        const buttonclick = document.getElementById('buttonclick');
+        buttonclick.addEventListener('click',function(){
+            window.location.href = './src/touchthis.html';
+        })
+        var currentSize = 1;
+        var dem = 0;
+        function tanglen() {
+            var dongy = document.getElementById("dongy");
+            currentSize += 1;
+            dem++;
+            dongy.style.fontSize = currentSize + "rem";
+            if(dem == 5){
+                var tutroi = document.querySelector('.button-p:last-of-type')
+                tutroi.remove();
+            }
+        }
+    </script>
+</body>
+</html>
